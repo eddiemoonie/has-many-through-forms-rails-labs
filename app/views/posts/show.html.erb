@@ -8,3 +8,14 @@ Categories: <br/>
     <li><%= c.name %></li>
   <% end %>
 </ul>
+
+<%= form_for(@post.comment) do |f| %>
+
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>
